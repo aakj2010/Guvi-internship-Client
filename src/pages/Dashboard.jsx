@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import ProfileUpdate from './ProfileUpdate'
 
 function Dashboard() {
   const navigate = useNavigate()
@@ -16,9 +17,10 @@ function Dashboard() {
     <>
 
       <section className='heading'>
-        <h2>Welcome    {user &&  user.name}</h2>
-        <p>Profile</p>
+        <h3>Welcome    {user && user.name}</h3>
+
       </section>
+      <ProfileUpdate />
 
     </>
   )
